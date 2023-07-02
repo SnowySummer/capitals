@@ -11,6 +11,7 @@
 // Safe read input
 void read_input(char buffer[WORD_SIZE]){
   fgets(buffer, WORD_SIZE, stdin);
+  while(getchar() != '\n');
   for (int i = 0; i < WORD_SIZE; i++){
     if (buffer[i] == 0 || buffer[i] == '\n'){
       buffer[i] = 0;
